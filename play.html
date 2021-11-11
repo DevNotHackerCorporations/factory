@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<main>
+		<h1 id="title">The Factory</h1>
+		<table id="table"></table>
+	</main>
+	<aside>
+		<h2>Coins: $<span id="numcoins">0</span></h2>
+		<h2>Day: <span id="numday">0</span></h2>
+		<h2>Abilities</h2>
+		<div id="abilities">
+			<div class="ab" onclick="jameswatt()">
+				<img src="https://uh.edu/engines/james-watt-inverclyde-gov-uk.jpg" width="80px">
+				<span>James Watt</span>
+				<span>Makes his engines run extra fast</span>
+				<span>Duration: 3 days</span>
+				<span>Cooldown: 5 days</span>
+				<span>Cost: $7500 per boost</span>
+				<span id="jwlabel">Ready to use</span>
+				<div class="meter">
+					<div class="innermeter jw" style="--width:0%"></div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<h2>Hire/buy</h2>
+		<div id="hire">
+		</div>
+		<h2>Current Factory: <span id="numsquares">25</span> squares</h2>
+		<div class="ab" onclick="upgrade()">
+			Upgrade to <span id="newupgrade" style="font-size:36px;">49</span>
+			<span id="newupgradecost">$2000</span>
+		</div>
+		<h2>Pay</h2>
+		<div id="pay">
+		</div>
+	</aside>
+	<script src="script.js"></script>
+</body>
+</html>

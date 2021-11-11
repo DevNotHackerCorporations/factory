@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+*, *::after, *::before{
+	box-sizing: border-box !important;
+}
+body{
+	background-color:rgb(54, 54, 54);
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	height:100vh;
+	margin: 0;
+}
+#title{
+	font-size:48px;
+}
+table td, .ab{
+	border: 1px solid white;
+	background-color:rgb(71, 71, 71);
+	min-height: 100px;
+	min-width: 100px;
+	margin:5px;
+	border-radius: 4px;
+	display: inline-flex;
+	cursor:pointer;
+	align-items: center;
+	flex-direction: column;
+	padding:10px;
+	justify-content: center;
+	user-select: none;
+}
+main{
+	float: left;
+}
+aside{
+	float:right;
+	background:rgb(71, 71, 71);
+	width:600px;
+	height:100%;
+	padding:10px 30px;
+	text-align: center;
+	overflow:auto;
+}
+.ab:hover{
+	filter:brightness(1.2);
+}
+.ab:active{
+	filter:brightness(1.5);
+}
+aside h2{
+	font-size:30px;
+}
+.meter{
+	width:80%;
+	height:20px;
+	border:1px solid white;
+	margin:10px;
+	border-radius:8px;
+}
+.innermeter{
+	width:var(--width);
+	height:100%;
+	background:white;
+}
