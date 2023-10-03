@@ -1,6 +1,1 @@
-# Workers
-## Human
-- Instalation cost: $100
-- 
-## James Watt Steam Engine
-- Instalation cost: $200
+Fix bug: even on a large board size, can only have 25 things

@@ -229,4 +229,18 @@ function jameswatt(){
 			}
 		}, 6000/cooldownduration)
 	}
-}	
+}
+
+//Music
+var audio_started = false;
+function startmusic(){
+	if (!audio_started){
+		audio_started = true;
+		audio = document.createElement("audio");
+		audio.src = "jetstream.mp3";
+		audio.loop = true;
+		audio.volume = 0.3;
+		audio.id = "background";
+		audio.play();
+	}
+}
