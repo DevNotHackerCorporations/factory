@@ -30,21 +30,22 @@ types = {
 		"info":"Pays workers for you",
 		"icon":"https://cdn-icons-png.flaticon.com/512/1802/1802806.png",
 		"onclick":"accountant=true;"
-	}
-	/*"James Watt":{
-		"give":0,
+	},
+	"Nuclear Plant":{
+		"give":1000,
 		"cost":200,
-		"install":5000,
-		"info":"Makes his engines run extra fast",
-		"icon":"https://uh.edu/engines/james-watt-inverclyde-gov-uk.jpg",
-		"onclick":"",
-		"t":""
-	}*/
+		"install":3000,
+		"info":"Very efficient",
+		"icon":"nuclear_plant.png",
+	}
 }
 stages = [
 	[5, 5, 0],
 	[7, 7, 20000],
-	[9, 9, 999999]
+	[9, 9, 40000],
+	[11, 11, 80000],
+	[0, 0, 0],
+	[0, 0, 0],
 ]
 stage = 0
 workers = {}
@@ -67,6 +68,12 @@ function refresh(reav=false){
 	let width = stages[stage][1]
 	$("#numsquares").html(height*width)
 	$("#newupgrade").html(stages[stage+1][1]*stages[stage+1][0])
+	if (stage >= 3){
+		stage = 3;
+		$("#newupgradecost").html("No more upgrades.")
+		$("#numsquares").html("")
+		$("#newupgrade").html("")
+	}
 	if (reav){
 		for (let k = 0; k < height*width; k++){
 			if (!nonav.includes(k)){
@@ -222,4 +229,18 @@ function jameswatt(){
 			}
 		}, 6000/cooldownduration)
 	}
-}	
+}
+
+//Music
+var audio_started = false;
+function startmusic(){
+	if (!audio_started){
+		audio_started = true;
+		audio = document.createElement("audio");
+		audio.src = "jetstream.mp3";
+		audio.loop = true;
+		audio.volume = 0.3;
+		audio.id = "background";
+		audio.play();
+	}
+}
